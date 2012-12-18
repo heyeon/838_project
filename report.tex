@@ -51,24 +51,36 @@ OUR OBSERVATION IS THAT
 THROUGH OUR EVALUATION WE FIND THAT
 
 \section{Methodology}
+\subsection{Design}
 A strong evaluation and understanding of reducing latency will be incomplete
 without simulateneously studying the tradeoffs between latency and other
 important factors such as bandwidth and CPU utilization. Thus, we study latency
-along with its influence on CPU utilization and bandwidth. 
+along with its influence on CPU utilization and bandwidth. We
+collect these metrics by running ping, iperf and pidtest. Furthermore, it would be 
+important to also understand the role of latency influencing factors in UDP and
+TCP. UDP should be faster than TCP since it allows a continous packet stream versus TCP that sends acknowledgements (acks) for a set of packets calculated using the TCP window size and round trip time (RTT) Thus, metrics were obtained for TCP 
+and UDP flows. 
+Offloading moves the IP and TCP processing to the Network Interace (NIC).
+Keeping type of NIC constant, we can study the influence of offloading on
+latency. TCP segmentation offload (TSO)/ Generic segmentation offload (GSO) are
+ considered useful in increase outbound  throughput of high-bandwidth network 
+connections since it reduces host CPU cyles for protocol header processing and checksumming.Generic receiving offload (GRO) attempts to replicate the TSO modus operandi on
+the receiver-side. Effects of offloading is studied by:
 
-In order to understand latency influencing paramters, it is also essential to
-understand the corresponding tradeoffs in throughput and CPU utilization. We
-collect these metrics by running ping, iperf and pidtest. These metrics were
-obtained for TCP and UDP flows, where each flow was subjected to various
-TCP segmentation offload (TSO), Generic segmentation offload (GSO) and 
-Generic segmentation offload (GRO) settings. Firstly, the effect of keeping
-TSO/GSO and GRO settings on was evaluated. This was followed by studying the
-effects of all setting off. Effect of TSO/GSO was evaluated by keeping these
-parameters on while GRO was switched off. Similarly, effect of GRO was evaluated
-by keeping the GRO paramater on, while TSO/GSO were switched off. 
- 
+\begin{enumerate}
+\item TSO/GSO and GRO : On
+\item TSO/GSO and GRO : Off
+\item TSO/GSO : On and GRO : Off
+\item TSO/GSO : Off and GRO : On 
+\end{enumerate} 
+
+\subsection{Experimental Setup}
+Commodity computers at the OpenFlow lab were utilized. Ping, iperf, 
+
 \section{Evaluation}
 \subsection{Bandwidth}
+\subsection{Offloading}
+TSO works by moving work of breaking down large chunks of data over to the NIC.
 \begin{figure}[t] 
 \includegraphics[scale=0.75]{avg_bandwidth_client_noswitch.png}
 \caption{Bandwidth is halved when GRO or TSO/GSO/GRO is switched off} 
@@ -137,6 +149,16 @@ all or only TSO/GSO presnece
 } 
 \label{fig:avg_latency_udp}
 \end{figure}
+
+\section{Limitations and Future Work}
+\emph{Remore Direct Memory Access (RDMA)} NICs would be interesting to study since it 
+simplifies many problems observed with generic TCP offloading. It would be
+especially interesting and important to relate latency observed from utilizing
+RDMA and CPU utilization on non-RDMA based NICs. Since RDMAs enable the network
+adapter to transfer data directly to or from application memory, no work is
+required from CPUs, caches or context switches.
+
+\emph{Maximum Transmission Unit (MTU)} is the greatest amount of data that can be transferred in one physical frame over the network. Thus, increasing MTU, may decrease latency. The standard MTU for etnernet is 1500 bytes. We would have like to increase that upto 9000 units, but were unable to perform experiments due to hardware limitations.  
 
 \section{Conclusion}
 
