@@ -112,7 +112,7 @@ traversed through an OpenFlow switch.
 \label{fig:avg_bandwidth_client_noswitch} \end{figure}
 
 
-In ~/cite{avg_cpu_client_noswitch}, x-axis represents the offloading paramaters,
+In ~/cite{avg_cpu_client_noswitch}, x-axis represents the offloading parameters,
    while y-axis respresents the average percent CPU utilization for TCP and UDP
    flows for a client when flows directly traverse from client to server.
    Irrespective of offloading settings, 100\% CPU utilization is observed for
@@ -120,22 +120,37 @@ In ~/cite{avg_cpu_client_noswitch}, x-axis represents the offloading paramaters,
    However, we see almost 100\% CPU utilization for TCP flows in the absence of
    TSO/GSO. This is in line with findings expressed in
    ~\cite{avg_bandwidth_client_noswitch}. Since the NIC non longer performs
-   offloading, CPU is utilized for segmentation. The CPU utlization increases
+   offloading, CPU is utilized for segmentation. The CPU utilization increases
    10x with a 2x decrease in bandwidth. 
-\begin{figure}[t] \includegraphics[scale=0.75]{avg_cpu_client_noswitch.png}
+\begin{figure}[t] 
+\includegraphics[scale=0.75]{avg_cpu_client_noswitch.png}
 \caption{CPU utilization is maxed when GRO or TSO/GSO/GRO is switched off}
-\label{fig:avg_cpu_client_noswitch} \end{figure}
+\label{fig:avg_cpu_client_noswitch} 
+\end{figure}
 
-
-\begin{figure}[t] \includegraphics[scale=0.75]{avg_cpu_client_switch.png}
+In ~/cite{avg_cpu_client_switch}, x-axis represents the offloading parameters,
+   while y-axis represents the average percent CPU utilization for TCP and UDP
+   flows when a switch is placed in server-client path. As observed in
+   ~cite{avg_cpu_client_noswitch}, the average CPU utilization remains
+   unaffected by varying offloading parameters for UDP flows. However, for TCP
+   flows, a significantly uniform and small percent of CPU utilization is
+   observed. 
+\begin{figure}[t] 
+\includegraphics[scale=0.75]{avg_cpu_client_switch.png}
 \caption{CPU utilization is not influenced by offloading settings in presence of
-    switch} \label{fig:avg_cpu_client_switch} \end{figure}
+    switch} 
+\label{fig:avg_cpu_client_switch} 
+\end{figure}
 
 
 \begin{figure}[t] \includegraphics[scale=0.75]{avg_cpu_server_noswitch.png}
 \includegraphics[scale=0.75]{avg_cpu_server_switch.png} \caption{CPU utilization
     remains fairly evenly distributed at the server end in the presence or
         absence of a switch} \label{fig:avg_cpu_server_noswitch} \end{figure}
+
+\begin{figure}[t] \includegraphics[scale=0.75]{avg_cpu_server_switch.png}
+\includegraphics[scale=0.75]{avg_cpu_server_switch.png} \caption{
+} \label{fig:avg_cpu_server_switch} \end{figure}
 
 \begin{figure}[t] \includegraphics[scale=0.75]{avg_cpu_tcp_client.png}
 \caption{CPU utilization may be influenced by absence of GRO or TSP/GSO/GRO on
