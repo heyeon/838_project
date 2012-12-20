@@ -1,5 +1,7 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage{usenix}
+\begin{document}
 \date{} 
-\usepackage{usenix} 
 \title{
 \Large 
 \bf Reducing Data Center Latency
@@ -19,9 +21,14 @@ Department of Computer Science, University of Wisconsin-Madison
 \maketitle
 
 \thispagestyle{empty}
-
-
-\subsection*{Abstract}
+\subsection{Abstract}
+In this paper we identify factors influencing latency in datacenters. With the
+advent of latency sensitive application, the focus on reducing latency in
+network has increased. By utilizing a server-client architecture and OpenFlow
+switches, we show that TCP and generic offloading, stochastic fair
+queueing and utilization switches over direct flows help reduce latency in
+networks. Further, we quantify the difference and propose further experiments
+that would help identify other latency influencing factors. 
 
 \section{Introduction} 
 In the last few decades, the key focus of the network
