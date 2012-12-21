@@ -110,7 +110,7 @@ machines at coarse timescales (1 second for CPU measurements) and it is our beli
 
 
 TSO works by moving the work of breaking down large chunks of data into MTU-sized packets over to the NIC.
-In figavgBandwidthClientNoswitch, the x-axis represents offloading settings
+In Figure ~\ref{avgBandwidthClientNoswitch}, the x-axis represents offloading settings
 while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
         switched off. This suggests that throughput may be increased by
         switching off offloading. Keeping GRO on in the absence of TSO/GSO did
@@ -120,7 +120,7 @@ while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
         offloading parameters when flows traversed through an OpenFlow switch. 
 
 
-In figavgcpuclientnoswitch, x-axis represents the offloading parameters,
+In Figure ~\ref{fig:avgcpuclientnoswitch}, x-axis represents the offloading parameters,
 while y-axis respresents the average percent CPU utilization for TCP and UDP
         flows for a client when flows directly traverse from client to server.
         Irrespective of offloading settings, 100\% CPU utilization is observed
@@ -139,7 +139,7 @@ while y-axis respresents the average percent CPU utilization for TCP and UDP
                 flows. However, for TCP flows, a significantly uniform and small
                 percent of CPU utilization is observed. 
 
-In figavgcpuservernoswitch, the x-axis represents the offloading parameters,
+In Figure ~\ref{fig:avgcpuservernoswitch}, the x-axis represents the offloading parameters,
 while y-axis represents the average percent cpu utilization.The fairly even
         distribution of cpu percent utilization with or without switch suggests
         that packet segmentation does not occur at the server end.
