@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 14:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -37,19 +37,25 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/endnotes/endn
+otes.sty
+\c@endnote=\count87
+\endnotesep=\dimen103
+\@enotes=\write3
+)
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/subfigure/sub
 figure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip43
 \subfigcapskip=\skip44
-\subfigcaptopadj=\dimen103
+\subfigcaptopadj=\dimen104
 \subfigbottomskip=\skip45
-\subfigcapmargin=\dimen104
+\subfigcapmargin=\dimen105
 \subfiglabelskip=\skip46
-\c@subfigure=\count87
-\c@lofdepth=\count88
-\c@subtable=\count89
-\c@lotdepth=\count90
+\c@subfigure=\count88
+\c@lofdepth=\count89
+\c@subtable=\count90
+\c@lotdepth=\count91
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -83,17 +89,17 @@ Package ifvtex Info: VTeX not detected.
 etex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count91
-\Gm@cntv=\count92
-\c@Gm@tempcnt=\count93
-\Gm@bindingoffset=\dimen105
-\Gm@wd@mp=\dimen106
-\Gm@odd@mp=\dimen107
-\Gm@even@mp=\dimen108
-\Gm@layoutwidth=\dimen109
-\Gm@layoutheight=\dimen110
-\Gm@layouthoffset=\dimen111
-\Gm@layoutvoffset=\dimen112
+\Gm@cnth=\count92
+\Gm@cntv=\count93
+\c@Gm@tempcnt=\count94
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
 \Gm@dimlist=\toks15
 )
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/hype
@@ -145,15 +151,15 @@ Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
 tions.sty
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
-\@linkdim=\dimen113
-\Hy@linkcounter=\count94
-\Hy@pagecounter=\count95
+\@linkdim=\dimen114
+\Hy@linkcounter=\count95
+\Hy@pagecounter=\count96
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/pd1e
 nc.def
 File: pd1enc.def 2011/08/19 v6.82h Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count96
+\Hy@SavedSpaceFactor=\count97
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/latexconfig/h
 yperref.cfg
@@ -166,16 +172,16 @@ Package hyperref Info: Plain pages OFF on input line 4068.
 Package hyperref Info: Backreferencing OFF on input line 4073.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4291.
-\c@Hy@tempcnt=\count97
+\c@Hy@tempcnt=\count98
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf/tex/latex/html/url.sty
 Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
  names
 )
 LaTeX Info: Redefining \url on input line 4644.
-\Fld@menulength=\count98
-\Field@Width=\dimen114
-\Fld@charsize=\dimen115
+\Fld@menulength=\count99
+\Field@Width=\dimen115
+\Fld@charsize=\dimen116
 Package hyperref Info: Hyper figures OFF on input line 5730.
 Package hyperref Info: Link nesting OFF on input line 5735.
 Package hyperref Info: Hyper index ON on input line 5738.
@@ -185,9 +191,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 5755.
 Package hyperref Info: PDF/A mode OFF on input line 5760.
 LaTeX Info: Redefining \ref on input line 5800.
 LaTeX Info: Redefining \pageref on input line 5804.
-\Hy@abspage=\count99
-\c@Item=\count100
-\c@Hfootnote=\count101
+\Hy@abspage=\count100
+\c@Item=\count101
+\c@Hfootnote=\count102
 )
 
 Package hyperref Message: Driver (default): hdvips.
@@ -204,8 +210,8 @@ File: pdfmark.def 2011/08/19 v6.82h Hyperref definitions for pdfmark specials
 \pdf@box=\box26
 \pdf@toks=\toks17
 \pdf@defaulttoks=\toks18
-\Fld@listcount=\count102
-\c@bookmark@seq@number=\count103
+\Fld@listcount=\count103
+\c@bookmark@seq@number=\count104
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/oberdiek/reru
 nfilecheck.sty
@@ -218,15 +224,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/tools/calc.st
 y
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count104
-\calc@Bcount=\count105
-\calc@Adimen=\dimen116
-\calc@Bdimen=\dimen117
+\calc@Acount=\count105
+\calc@Bcount=\count106
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
 \calc@Askip=\skip50
 \calc@Bskip=\skip51
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count106
+\calc@Ccount=\count107
 \calc@Cskip=\skip52
 )
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/oberdiek/epst
@@ -304,13 +310,13 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 s.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen118
-\Gin@req@width=\dimen119
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
 )
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/float/float.s
 ty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count107
+\c@float@type=\count108
 \float@exts=\toks19
 \float@box=\box27
 \@float@everytoks=\toks20
@@ -319,23 +325,23 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/tools/multico
 l.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count108
+\c@tracingmulticols=\count109
 
 
 Package multicol Warning: May not work with the twocolumn option on input line 
 135.
 
 \mult@box=\box29
-\multicol@leftmargin=\dimen120
-\c@unbalance=\count109
-\c@collectmore=\count110
-\doublecol@number=\count111
-\multicoltolerance=\count112
-\multicolpretolerance=\count113
-\full@width=\dimen121
-\page@free=\dimen122
-\premulticols=\dimen123
-\postmulticols=\dimen124
+\multicol@leftmargin=\dimen121
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen122
+\page@free=\dimen123
+\premulticols=\dimen124
+\postmulticols=\dimen125
 \multicolsep=\skip53
 \multicolbaselineskip=\skip54
 \partial@page=\box30
@@ -361,22 +367,15 @@ Package multicol Warning: May not work with the twocolumn option on input line
 \@tempa=\box50
 \@tempa=\box51
 \@tempa=\box52
-\c@columnbadness=\count114
-\c@finalcolumnbadness=\count115
-\last@try=\dimen125
-\multicolovershoot=\dimen126
-\multicolundershoot=\dimen127
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen126
+\multicolovershoot=\dimen127
+\multicolundershoot=\dimen128
 \mult@nat@firstbox=\box53
 \colbreak@box=\box54
-\multicol@sort@counter=\count116
-) (./report.aux
-
-LaTeX Warning: Label `fig:cpuClientTcpUdp' multiply defined.
-
-
-LaTeX Warning: Label `fig:cpuClientTcpUdpNoSwitch' multiply defined.
-
-)
+\multicol@sort@counter=\count117
+) (./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -444,16 +443,16 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 ttitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count118
 )
 LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
 LaTeX Info: Redefining \nameref on input line 18.
  (./report.out) (./report.out)
-\@outlinefile=\write3
-\openout3 = `report.out'.
+\@outlinefile=\write4
+\openout4 = `report.out'.
 
-\big@size=\dimen128
+\big@size=\dimen129
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 19
@@ -490,80 +489,138 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
-
-! Undefined control sequence.
-<recently read> \textt 
-                       
-l.19 \maketitle
-               
-? 
-! Undefined control sequence.
-<recently read> \textt 
-                       
-l.19 \maketitle
-               
-? 
-! Undefined control sequence.
-<recently read> \textt 
-                       
-l.19 \maketitle
-               
-? 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+
+
+LaTeX Warning: Citation `dctcp' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Citation `queueing' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Citation `tcpPacing' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Citation `chiola' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `chun' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `eicken' on page 1 undefined on input line 48.
+
+
+LaTeX Warning: Citation `dittia' on page 1 undefined on input line 48.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+
+LaTeX Warning: Citation `dctcp' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `hull' on page 1 undefined on input line 66.
+
 [1
 
 
 ]
+
+LaTeX Warning: Citation `openflow' on page 2 undefined on input line 100.
+
 File: img/cpuTcp.ps Graphic file (type eps)
- <img/cpuTcp.ps>
+<img/cpuTcp.ps>
 File: img/latencyTCP.ps Graphic file (type eps)
  <img/latencyTCP.ps>
+File: img/latencyUDP.ps Graphic file (type eps)
+ <img/latencyUDP.ps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-File: img/latencyUDP.ps Graphic file (type eps)
-
-<img/latencyUDP.ps>
 File: img/cpuClientTcpUdp.ps Graphic file (type eps)
- <img/cpuClientTcpUdp.ps>
+
+<img/cpuClientTcpUdp.ps>
+File: img/cpuClientTcpUdpNoSwitch.ps Graphic file (type eps)
+ <img/cpuClientTcpUdpNoSwitch.ps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: img/cpuClientTcpUdpNoSwitch.ps Graphic file (type eps)
+File: img/cpuServerTcpUdp.ps Graphic file (type eps)
 
-<img/cpuClientTcpUdpNoSwitch.ps>
+<img/cpuServerTcpUdp.ps>
+File: img/cpuServerTcpUdpNoSwitch.ps Graphic file (type eps)
+ <img/cpuServerTcpUdpNoSwitch.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: File `img/cpuSeverTcpUdp.ps' not found on input line 188.
+ [3]
+File: img/latencyFifo.ps Graphic file (type eps)
+
+<img/latencyFifo.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-! LaTeX Error: File `img/cpuSeverTcpUdp.ps' not found.
+Underfull \hbox (badness 1308) in paragraph at lines 205--210
+[]\OT1/ptm/m/n/10 These re-sults in /ref-fig:latencyFIFOwould in-di-cate
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.188 ...raphics[scale=0.5]{img/cpuSeverTcpUdp.ps}
-                                                  
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.188 ...raphics[scale=0.5]{img/cpuSeverTcpUdp.ps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+File: img/latencySFQ.ps Graphic file (type eps)
+<img/latencySFQ.ps>
+File: img/latencySFQTcp.ps Graphic file (type eps)
+ <img/latencySFQTcp.ps>
+File: img/latencySFQUdp.ps Graphic file (type eps)
+ <img/latencySFQUdp.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- 
+ [4]
+File: img/bandwidthClientNoSwitch.ps Graphic file (type eps)
+
+<img/bandwidthClientNoSwitch.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+(./report.bbl
+Underfull \hbox (badness 5756) in paragraph at lines 49--53
+[]\OT1/ptm/m/sc/8 McKeown, N., An-der-son, T., Bal-akr-ish-nan, H.,
+ []
+
+)
+
+! LaTeX Error: File `report.ent' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: ent)
+
+Enter file name: 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
+[6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
+ (./report.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 290.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: B06F497CF4E97D6F849102A9B03C4729;318
+(rerunfilecheck)             After:  A04B4E1727C5483B8C2CEAA88729CD36;532.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5439 strings out of 493630
- 83407 string characters out of 3134987
- 180130 words of memory out of 3000000
- 8692 multiletter control sequences out of 15000+200000
- 21940 words of font info for 54 fonts, out of 3000000 for 9000
+ 5499 strings out of 493630
+ 84311 string characters out of 3134987
+ 178907 words of memory out of 3000000
+ 8736 multiletter control sequences out of 15000+200000
+ 23641 words of font info for 57 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 30i,8n,31p,259b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
-Output written on report.dvi (2 pages, 18372 bytes).
+ 30i,8n,28p,259b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on report.dvi (6 pages, 31844 bytes).
