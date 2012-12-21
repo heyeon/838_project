@@ -1,5 +1,5 @@
 \documentclass[letterpaper,twocolumn,10pt]{article}
-\usepackage{endnotes, hyperref, geometry,calc,epstopdf,usenix, graphicx, float, multicol}
+\usepackage{endnotes, hyperref, geometry,calc,epstopdf,usenix, graphicx, float}
 \date{} 
 \title{
 \Large 
@@ -219,7 +219,7 @@ remained fairly constant for switch as well as client despite varying
 offloading parameters when flows traversed through an OpenFlow switch. 
 
 
-In Figure ~\ref{fig:cpuClientNoSwitch}, x-axis represents the offloading parameters,
+In Figure ~\ref{fig:cpuClientTcpUdpNoSwitch}, x-axis represents the offloading parameters,
 while y-axis respresents the average percent CPU utilization for TCP and UDP
 flows for a client when flows directly traverse from client to server.
 Irrespective of offloading settings, 100\% CPU utilization is observed
@@ -229,16 +229,16 @@ flows in the absence of TSO/GSO. This is in line with findings
 expressed in Figure ~\ref{fig:bandwidthClientNoSwitch}. Since the NIC non
 longer performs offloading, CPU is utilized for segmentation.
 The CPU utilization increases 10x with a 2x decrease in
-bandwidth.  In ~\ref{fig:cpuClientSwitch}, x-axis represents the
+bandwidth.  In ~\ref{fig:cpuClientTcpUdp}, x-axis represents the
 offloading parameters, while y-axis represents the average
 percent CPU utilization for TCP and UDP flows when a switch is
 placed in server-client path. As observed in
-~\ref{fig:cpuClientNoSwitch}, the average CPU utilization
+~\ref{fig:cpuClientTcpUdpNoSwitch}, the average CPU utilization
 remains unaffected by varying offloading parameters for UDP
 flows. However, for TCP flows, a significantly uniform and small
 percent of CPU utilization is observed. 
 
-In ~\ref{fig:cpuServerNoSwitch}, the x-axis represents the offloading parameters,
+In ~\ref{fig:cpuServerTcpUdpNoSwitch}, the x-axis represents the offloading parameters,
 while y-axis represents the average percent cpu utilization.The fairly even
 distribution of cpu percent utilization with or without switch suggests
 that packet segmentation does not occur at the server end.

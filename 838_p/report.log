@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 17:03
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 17:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,60 +289,6 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box27
 \@float@everytoks=\toks20
 \@floatcapt=\box28
-)
-(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/tools/multico
-l.sty
-Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
-\c@tracingmulticols=\count105
-
-
-Package multicol Warning: May not work with the twocolumn option on input line 
-135.
-
-\mult@box=\box29
-\multicol@leftmargin=\dimen119
-\c@unbalance=\count106
-\c@collectmore=\count107
-\doublecol@number=\count108
-\multicoltolerance=\count109
-\multicolpretolerance=\count110
-\full@width=\dimen120
-\page@free=\dimen121
-\premulticols=\dimen122
-\postmulticols=\dimen123
-\multicolsep=\skip47
-\multicolbaselineskip=\skip48
-\partial@page=\box30
-\last@line=\box31
-\mult@rightbox=\box32
-\mult@grightbox=\box33
-\mult@gfirstbox=\box34
-\mult@firstbox=\box35
-\@tempa=\box36
-\@tempa=\box37
-\@tempa=\box38
-\@tempa=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\@tempa=\box51
-\@tempa=\box52
-\c@columnbadness=\count111
-\c@finalcolumnbadness=\count112
-\last@try=\dimen124
-\multicolovershoot=\dimen125
-\multicolundershoot=\dimen126
-\mult@nat@firstbox=\box53
-\colbreak@box=\box54
-\multicol@sort@counter=\count113
 ) (./report.aux)
 \openout1 = `report.aux'.
 
@@ -366,7 +312,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
 .fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box55
+\AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 18.
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/name
@@ -377,7 +323,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 ttitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count114
+\c@section@level=\count105
 )
 LaTeX Info: Redefining \ref on input line 18.
 LaTeX Info: Redefining \pageref on input line 18.
@@ -421,7 +367,7 @@ LaTeX Info: Redefining \nameref on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\big@size=\dimen127
+\big@size=\dimen119
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 19
@@ -498,23 +444,8 @@ File: img/latencyFifo.ps Graphic file (type eps)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-
-LaTeX Warning: Reference `fig:cpuClientNoSwitch' on page 5 undefined on input l
-ine 222.
-
-
-LaTeX Warning: Reference `fig:cpuClientSwitch' on page 5 undefined on input lin
-e 232.
-
-
-LaTeX Warning: Reference `fig:cpuClientNoSwitch' on page 5 undefined on input l
-ine 236.
-
-
-LaTeX Warning: Reference `fig:cpuServerNoSwitch' on page 5 undefined on input l
-ine 241.
-
 File: img/latencySFQ.ps Graphic file (type eps)
+
 <img/latencySFQ.ps>
 File: img/latencySFQTcp.ps Graphic file (type eps)
  <img/latencySFQTcp.ps>
@@ -544,18 +475,14 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 324.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 324.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A04B4E1727C5483B8C2CEAA88729CD36;532.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 5350 strings out of 493630
- 81870 string characters out of 3134987
- 179555 words of memory out of 3000000
- 8599 multiletter control sequences out of 15000+200000
+ 5255 strings out of 493630
+ 80373 string characters out of 3134987
+ 175674 words of memory out of 3000000
+ 8507 multiletter control sequences out of 15000+200000
  23809 words of font info for 58 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  30i,8n,31p,281b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.dvi (7 pages, 37960 bytes).
+Output written on report.dvi (7 pages, 38656 bytes).
