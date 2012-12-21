@@ -1,5 +1,5 @@
 \documentclass[letterpaper,twocolumn,10pt]{article}
-\usepackage{geometry,hyperref,calc,epstopdf,usenix, graphicx, float, multicol}
+\usepackage{subfigure,geometry,hyperref,calc,epstopdf,usenix, graphicx, float, multicol}
 \date{} 
 \title{
 \Large 
@@ -141,22 +141,98 @@ while y-axis represents the average percent cpu utilization.The fairly even
         distribution of cpu percent utilization with or without switch suggests
         that packet segmentation does not occur at the server end.
 
-\begin{figure}[t]
-\includegraphics[scale=0.5]{img/latencyFifo.eps}
-\caption{Average latency (ms) on client end for FIFO}
-\label{fig:latencyFifo}
-\end{figure}
-
-\begin{figure}[t]
-\begin{picture}(30,0) 
-\put(0,0) {\special{psfile = img/cpuClientTcpUdp.ps hscale = 50 vscale = 50}}
-\end{picture}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/cpuTcp.ps}
 \caption{The x$-$axis represents offloading parameters while y$-$axis looks at
 average percent CPU utilization}
+\label{fig:cpuTcp}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencyTCP.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average latency}
+\label{fig:latencyTcp}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencyUDP.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average latency}
+\label{fig:latencyUdp}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/cpuClientTcpUdp.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average percent CPU utilization in presence of switch on client end}
 \label{fig:cpuClientTcpUdp}
 \end{figure}
 
-In ~/ref{fig:latencyFifo} TEST
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/cpuClientTcpUdpNoSwitch.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average percent CPU utilization in absence of switch on client end}
+\label{fig:cpuClientTcpUdpNoSwitch}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/cpuClientTcpUdp.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average percent CPU utilization in presence of switch on server end}
+\label{fig:cpuClientTcpUdp}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/cpuClientTcpUdpNoSwitch.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average percent CPU utilization in absence of switch on server end}
+\label{fig:cpuClientTcpUdpNoSwitch}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencyFifo.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average latency for FIFO algorithm}
+\label{fig:latencyFIFO}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencySFQ.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average latency for SFQ algorithm}
+\label{fig:latencySFQ}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencySFQTcp.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average latency for SFQ algorithm with TCP flows} 
+\label{fig:latencySFQTcp}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencySFQUdp.ps}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average latency for SFQ algorithm with UDP flows} 
+\label{fig:latencySFQUdp}
+\end{figure}
+
 \subsection{Latency} In figavglatencyfifosfq, the x-axis represents the
 offloading parameters, while y-axis represents the latency in ms for TCP flows
 at the client end. A distinct difference in latency is observed for when GRO is
