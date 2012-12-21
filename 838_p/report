@@ -1,5 +1,5 @@
 \documentclass[letterpaper,twocolumn,10pt]{article}
-\usepackage{epstopdf, underscore, usenix, graphicx, float, multicol}
+\usepackage{geometry,hyperref,calc,epstopdf,usenix, graphicx, float, multicol}
 \date{} 
 \title{
 \Large 
@@ -41,7 +41,7 @@ focus on circuit switching moved to packet switching due to bandwidth and
 hardware inefficiencies in working with network resources for bursty
 communication traffic. The Transmission Control Protocol(TCP) was invented to
 address the issue of bandwidth/congestion collapse in the network and ensure
-bandwidth fairness.~\cite{dctcp,queueing,tcp_pacing} \\However network latency has
+bandwidth fairness.~\cite{dctcp,queueing,tcpPacing} \\However network latency has
 been given less importance. The last 30 decades have brought a meager 30x
 reduction in latency, versus the 3000x times improvement in bandwidth. Several
 studies have been conducted in the 90s to tackle the latency issue, but they
@@ -107,7 +107,7 @@ Mbits/sec and average percent CPU utilization.  \section{Evaluation}
 
 
 TSO works by moving work of breaking down large chunks of data over to the NIC.
-In fig_avgBandwidthClientNoswitch, the x-axis represents offloading settings
+In figavgBandwidthClientNoswitch, the x-axis represents offloading settings
 while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
         switched off. This suggests that throughput may be increased by
         switching off offloading. Keeping GRO on in the absence of TSO/GSO did
@@ -117,26 +117,26 @@ while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
         offloading parameters when flows traversed through an OpenFlow switch. 
 
 
-In fig_avg_cpu_client_noswitch, x-axis represents the offloading parameters,
+In figavgcpuclientnoswitch, x-axis represents the offloading parameters,
 while y-axis respresents the average percent CPU utilization for TCP and UDP
         flows for a client when flows directly traverse from client to server.
         Irrespective of offloading settings, 100\% CPU utilization is observed
         for UDP flows. This makes sense, since no offloading should occur for
                 UDP flows.  However, we see almost 100\% CPU utilization for TCP
                 flows in the absence of TSO/GSO. This is in line with findings
-                expressed in fig_avgBandClientNoswitch. Since the NIC non
+                expressed in figavgBandClientNoswitch. Since the NIC non
                 longer performs offloading, CPU is utilized for segmentation.
                 The CPU utilization increases 10x with a 2x decrease in
-                bandwidth.  In fig_avg_cpu_client_switch, x-axis represents the
+                bandwidth.  In figavgcpuclientswitch, x-axis represents the
                 offloading parameters, while y-axis represents the average
                 percent CPU utilization for TCP and UDP flows when a switch is
                 placed in server-client path. As observed in
-                fig_avg_cpu_client_noswitch, the average CPU utilization
+                figavgcpuclientnoswitch, the average CPU utilization
                 remains unaffected by varying offloading parameters for UDP
                 flows. However, for TCP flows, a significantly uniform and small
                 percent of CPU utilization is observed. 
 
-In fig_avg_cpu_server_noswitch, the x-axis represents the offloading parameters,
+In figavgcpuservernoswitch, the x-axis represents the offloading parameters,
 while y-axis represents the average percent cpu utilization.The fairly even
         distribution of cpu percent utilization with or without switch suggests
         that packet segmentation does not occur at the server end.
@@ -147,11 +147,20 @@ while y-axis represents the average percent cpu utilization.The fairly even
 \label{fig:latencyFifo}
 \end{figure}
 
+\begin{figure}[t]
+\begin{picture}(30,0) 
+\put(0,0) {\special{psfile = img/cpuClientTcpUdp.ps hscale = 50 vscale = 50}}
+\end{picture}
+\caption{The x$-$axis represents offloading parameters while y$-$axis looks at
+average percent CPU utilization}
+\label{fig:cpuClientTcpUdp}
+\end{figure}
+
 In ~/ref{fig:latencyFifo} TEST
-\subsection{Latency} In fig_avg_latency_fifo_sfq, the x-axis represents the
+\subsection{Latency} In figavglatencyfifosfq, the x-axis represents the
 offloading parameters, while y-axis represents the latency in ms for TCP flows
 at the client end. A distinct difference in latency is observed for when GRO is
-switched off for SQF.  In fig_avg_latency_FIFO, we see the average latency in ms
+switched off for SQF.  In figavglatencyFIFO, we see the average latency in ms
 for UDP flows is independent of offloading settings. However, for TCP,
         TSO/GSO's presence dramatically increases latency in absence of switch. 
 

@@ -34,6 +34,10 @@ Dctcp linux kernel patch.
 \newblock Integrated hardware/software design of a high-performance network
   interface, 2001.
 
+\bibitem{tcpPacing}
+{\sc D.Lacamera}.
+\newblock Tcp pacing linux implementation.
+
 \bibitem{eicken}
 {\sc Eicken, T.~V., Basu, A., Buch, V., and Vogels, W.}
 \newblock U-net: A user-level network interface for parallel and distributed
