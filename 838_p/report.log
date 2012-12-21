@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 13:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -536,60 +536,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: img/cpuClientTcpUdpNoSwitch.ps Graphic file (type eps)
 
 <img/cpuClientTcpUdpNoSwitch.ps>
-File: img/cpuClientTcpUdp.ps Graphic file (type eps)
- <img/cpuClientTcpUdp.ps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-File: img/cpuClientTcpUdpNoSwitch.ps Graphic file (type eps)
+LaTeX Warning: File `img/cpuSeverTcpUdp.ps' not found on input line 188.
 
-<img/cpuClientTcpUdpNoSwitch.ps>
-File: img/latencyFifo.ps Graphic file (type eps)
- <img/latencyFifo.ps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: img/latencySFQ.ps Graphic file (type eps)
+! LaTeX Error: File `img/cpuSeverTcpUdp.ps' not found.
 
-<img/latencySFQ.ps>
-File: img/latencySFQTcp.ps Graphic file (type eps)
- <img/latencySFQTcp.ps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-File: img/latencySFQUdp.ps Graphic file (type eps)
-
-<img/latencySFQUdp.ps> (./report.bbl [5]
-Underfull \hbox (badness 5756) in paragraph at lines 49--53
-[]\OT1/ptm/m/sc/8 McKeown, N., An-der-son, T., Bal-akr-ish-nan, H.,
- []
-
-)
-! Undefined control sequence.
-l.276 \theendnotes
-                  
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188 ...raphics[scale=0.5]{img/cpuSeverTcpUdp.ps}
+                                                  
 ? 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
-[6
+! Emergency stop.
+ ...                                              
+                                                  
+l.188 ...raphics[scale=0.5]{img/cpuSeverTcpUdp.ps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
- (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: A04B4E1727C5483B8C2CEAA88729CD36;532.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 5456 strings out of 493630
- 83492 string characters out of 3134987
- 180120 words of memory out of 3000000
- 8701 multiletter control sequences out of 15000+200000
- 23641 words of font info for 57 fonts, out of 3000000 for 9000
+ 5439 strings out of 493630
+ 83407 string characters out of 3134987
+ 180130 words of memory out of 3000000
+ 8692 multiletter control sequences out of 15000+200000
+ 21940 words of font info for 54 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 30i,8n,31p,259b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on report.dvi (6 pages, 31936 bytes).
+ 30i,8n,31p,259b,313s stack positions out of 5000i,500n,10000p,200000b,50000s
+Output written on report.dvi (2 pages, 18372 bytes).

@@ -185,18 +185,18 @@ average percent CPU utilization in absence of switch on client end}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{img/cpuSeverTcpUdp.ps}
+\includegraphics[scale=0.5]{img/cpuServerTcpUdp.ps}
 \caption{The x$-$axis represents offloading parameters while y$-$axis looks at
 average percent CPU utilization in presence of switch on server end}
-\label{fig:cpuSeverTcpUdp}
+\label{fig:cpuServerTcpUdp}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{img/cpuSeverTcpUdpNoSwitch.ps}
+\includegraphics[scale=0.5]{img/cpuServerTcpUdpNoSwitch.ps}
 \caption{The x$-$axis represents offloading parameters while y$-$axis looks at
 average percent CPU utilization in absence of switch on server end}
-\label{fig:cpuSeverTcpUdpNoSwitch}
+\label{fig:cpuServerTcpUdpNoSwitch}
 \end{figure}
 
 
