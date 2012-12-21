@@ -8,11 +8,11 @@
 
 \author{ 
 {\rm Zainab Ghadiyali}\\ 
-\textt{zainab@cs.wisc.edu}
+\texttt{zainab@cs.wisc.edu}
 \and {\rm Michael Griepentrog}\\
-\textt{mgriepentrog@cs.wisc.edu}\\ 
+\texttt{mgriepentrog@cs.wisc.edu}\\ 
 \and{\rm Aditya Akella}\\
-\textt{akella@cs.wisc.edu}
+\texttt{akella@cs.wisc.edu}
 } 
 
 \begin{document}
@@ -24,15 +24,11 @@ Latency is usually compromised in order to improve bandwidth. However,
 with the advent of latency sensitive applications such as high frequency trading
 , the focus on reducing latency in network has increased. Furthermore, computation is 
 increasingly also shifting to datacenters. Coupled together, these two factors
-necessitate further study on latency in datacenters. In this body of work, we
-study various factors that may influence latency, such as type of flows,
-offloading parameters, hardware such as network interface cards, optimized
-algorithms such as stochastic fair queueing and type of routers (presence and
-absence of switches). By utilizing a server-client architecture and OpenFlow
-switches, we show that offloading, stochastic fair queueing and utilization
-switches over direct flows help reduce latency in networks. Further, we quantify
-the difference and propose further experiments that would help identify other
-latency influencing factors. 
+necessitate further study on latency in datacenters. In this body of work, we present 
+a measurement study where we examine various factors such as CPU ulilization, send and receive offloading, and how queueing affects latency. %By utilizing a server-client architecture and OpenFlow switches, we show that offloading, stochastic fair queueing and utilization
+%switches over direct flows help reduce latency in networks. Further, we quantify
+%the difference and propose further experiments that would help identify other
+%latency influencing factors. 
 
 \section{Introduction} 
 In the last few decades, the key focus of the network
@@ -54,9 +50,11 @@ delay interrupts for upto 30 $\mu$s. Latency for latency sensitive applications
 is seen as an acceptable trade-off in order to maintain high bandwidth
 utilization.  \\However, there is now an increasing interest in reducing latency
 in datacenters. A substantial amount of computing is now shifting to data
-centers and reducing latency is now easier given the confines of a building
-rather than tackling the issue for the internet at large.  Furthermore, ultra
-low latency sensitive applications such as High Frequency Trading, HPC and
+centers and examining ways of reducing latency in data centers is interesting 
+as the data center operator has control of all aspects of the network. However, 
+it is still important to investigate end-host solutions for cases where a tenant 
+is co-locating servers in a data center and does not control the network topology 
+or switches. Reducing latency is especially important in applications such as High Frequency Trading, HPC and
 Google Instant Search service could especially benefit from this.  Several
 high-frequency traders implement trading applications with a goal to reach a
 trade decision in under 100 microseconds. NIC, end-host stacks and switches are
@@ -64,8 +62,8 @@ all points where a packet may experience latency while traversing from client to
 server.  In order to address delays arising from queueing delay at switches,
 DCTCP ~\cite{dctcp} uses ECN marking to slow down flows before the queue is
 saturated. HULL ~\cite{hull} further suggests trading off a little bandwidth to
-provide smaller amount of latency.  In this paper, we look into understanding
-how switch, various offloading parameters and hardware influences latency.
+provide smaller amount of latency by never allowing queues to build up at the switch.
+In this paper, we aim to understand how offloading, switches, NICs, and queues affect latency, and what are the potential trade-offs.
 
 OUR OBSERVATION IS THAT
 
@@ -73,40 +71,41 @@ THROUGH OUR EVALUATION WE FIND THAT
 
 \section{Methodology} 
 \subsection{Design} A strong evaluation and understanding
-of reducing latency will be incomplete without simultaeneously studying the
+of reducing latency will be incomplete without simultaneously studying the
 trade-offs between latency and other important factors such as bandwidth and CPU
 utilization. Thus, we study latency along with its influence on CPU utilization
-and bandwidth. Furthermore, it would be important to also understand the role of
-latency influencing factors in UDP and TCP. UDP should be faster than TCP since
-it allows a continuous packet stream versus TCP that sends acknowledgements
-(ACKS) for a set of packets calculated using the TCP window size and round trip
-time (RTT) Thus, metrics were obtained for TCP and UDP flows.  Offloading moves
+and bandwidth. We also aim to examine the effects of queueing. In one set of 
+experiments, we use TCP which by nature will cause queueing. In the other set 
+of experiments, we use a 500 Mbps UDP flow to simulate some traffic on the network, 
+but latency senstive flows should not be queued. To represent a latency sensitive flow, 
+we ping the other host every 200 ms for the duration of the TCP/UDP flow. Offloading moves
 the IP and TCP processing to the NICs. Keeping type of NIC constant, we can
 study the influence of offloading on latency. TCP segmentation offload (TSO)/
 Generic segmentation offload (GSO) are considered useful in increase outbound
 throughput of high-bandwidth network connections since it reduces host CPU
 cycles for protocol header processing and checksumming.Generic receiving offload
-(GRO) attempts to replicate the TSO modus operandi on the receiver-side. Effects
-of offloading is studied by:
+(GRO) attempts to replicate the TSO modus operandi on the receiver-side. We conduct 
+our experiments with the following offloading configurations at end-hosts:
 
 \begin{enumerate} \item TSO/GSO and GRO : On \item TSO/GSO and GRO : Off \item
 TSO/GSO : On and GRO : Off \item TSO/GSO : Off and GRO : On \end{enumerate} 
 
 \subsection{Experimental Setup} Two commodity computers connected via an
-OpenFlow switch ~\cite{openflow}. One of the computers served as a client and
-the other as server. Eight experiments were ran in this setting. Another eight
-experiments ran on the two machines in absence of OpenFlow switch. For each
-experiment, throughput is recorded using iperf, cpu utilization through pidstat,
-interpacket delay through tcpdump and latency through ping. This process was
+OpenFlow switch ~\cite{openflow}. One of the computers served as a client (sender of traffic) and
+the other as server (receiver of traffic). Eight experiments were run in this setting. Another eight
+experiments were run with the two machines connected directly together. For each
+experiment, throughput is recorded using iperf, CPU utilization through pidstat,
+inter-packet delay with tcpdump and latency through ping. This process was
 automated by running bash scripts on server and client end. Offloading
 parameters were varied using ethtool. Data was analysed using wireshark and a
 python script that parsed results from experiments and provided basic summary in
 terms of min, max, stdev and average latency, average throughput in terms of
-Mbits/sec and average percent CPU utilization.  \section{Evaluation}
+Mbits/sec and average percent CPU utilization. These experiments were run on multi-core 
+machines at coarse timescales (1 second for CPU measurements) and it is our belief that our instrumentation adds little overhead.\section{Evaluation}
 \subsection{Bandwidth} 
 
 
-TSO works by moving work of breaking down large chunks of data over to the NIC.
+TSO works by moving the work of breaking down large chunks of data into MTU-sized packets over to the NIC.
 In figavgBandwidthClientNoswitch, the x-axis represents offloading settings
 while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
         switched off. This suggests that throughput may be increased by
@@ -273,6 +272,6 @@ possible.
 
 }
 
-\theendnotes
+%\theendnotes
 
 \end{document}
