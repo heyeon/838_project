@@ -23,13 +23,16 @@
 \subsection*{Abstract}
 Latency is usually compromised in order to improve bandwidth. However, 
 with the advent of latency sensitive applications such as high frequency trading
-, the focus on reducing latency in network has increased. Furthermore, computation is 
-increasingly also shifting to datacenters. Coupled together, these two factors
-necessitate further study on latency in datacenters. In this body of work, we present 
-a measurement study where we examine various factors such as CPU ulilization, send and receive offloading, and how queueing affects latency. %By utilizing a server-client architecture and OpenFlow switches, we show that offloading, stochastic fair queueing and utilization
-%switches over direct flows help reduce latency in networks. Further, we quantify
-%the difference and propose further experiments that would help identify other
-%latency influencing factors. 
+, the focus on reducing latency in network has increased. Furthermore,
+computation is increasingly also shifting to datacenters. Coupled together,
+these two factors necessitate further study on latency in datacenters. In this
+body of work, we present a measurement study where we examine various factors
+such as CPU utilization, send and receive offloading, and how queueing affects
+latency. %By utilizing a server-client architecture and OpenFlow switches, we
+show that offloading, stochastic fair queueing and utilization
+%switches over direct flows help reduce latency in networks. Further, we
+%quantify the difference and propose further experiments that would help
+%identify other latency influencing factors. 
 
 \section{Introduction} 
 In the last few decades, the key focus of the network
@@ -68,9 +71,10 @@ provide smaller amount of latency by never allowing queues to build up at the
 switch.  In this paper, we aim to understand how offloading, switches, NICs, and
 queues affect latency, and what are the potential trade-offs.
 
-OUR OBSERVATION IS THAT
-
-THROUGH OUR EVALUATION WE FIND THAT
+We observe that offload parameters positive influence latency. That is, latency
+decreases in the presence of offloading. Queueing algorithms such as stochastic
+fair queueing may also help reduce latency, although our data also suggests high
+standard deviation which necessitates further experimentation. 
 
 \section{Methodology} 
 \subsection{Design} A strong evaluation and understanding
@@ -80,7 +84,7 @@ utilization. Thus, we study latency along with its influence on CPU utilization
 and bandwidth. We also aim to examine the effects of queueing. In one set of 
 experiments, we use TCP which by nature will cause queueing. In the other set 
 of experiments, we use a 500 Mbps UDP flow to simulate some traffic on the network, 
-but latency senstive flows should not be queued. To represent a latency sensitive flow, 
+but latency sensitive flows should not be queued. To represent a latency sensitive flow, 
 we ping the other host every 200 ms for the duration of the TCP/UDP flow. Offloading moves
 the IP and TCP processing to the NICs. Keeping type of NIC constant, we can
 study the influence of offloading on latency. TCP segmentation offload (TSO)/
@@ -98,9 +102,10 @@ our experiments with the following offloading configurations at end-hosts:
 \end{enumerate} 
 
 \subsection{Experimental Setup} Two commodity computers connected via an
-OpenFlow switch ~\cite{openflow}. One of the computers served as a client (sender of traffic) and
-the other as server (receiver of traffic). Eight experiments were run in this setting. Another eight
-experiments were run with the two machines connected directly together. For each
+OpenFlow switch ~\cite{openflow}. One of the computers served as a client
+(sender of traffic) and the other as server (receiver of traffic). Eight
+experiments were run in this setting. Another eight experiments were run with
+the two machines connected directly together. For each
 experiment, throughput is recorded using iperf, CPU utilization through pidstat,
 inter-packet delay with tcpdump and latency through ping. This process was
 automated by running bash scripts on server and client end. Offloading
@@ -125,7 +130,7 @@ offloading parameters when flows traversed through an OpenFlow switch.
 
 
 In Figure ~\ref{fig:avgcpuclientnoswitch}, x-axis represents the offloading parameters,
-while y-axis respresents the average percent CPU utilization for TCP and UDP
+while y-axis represents the average percent CPU utilization for TCP and UDP
 flows for a client when flows directly traverse from client to server.
 Irrespective of offloading settings, 100\% CPU utilization is observed
 for UDP flows. This makes sense, since no offloading should occur for
@@ -224,7 +229,7 @@ offloading parameters when flows traversed through an OpenFlow switch.
 
 
 In Figure ~\ref{fig:cpuClientTcpUdpNoSwitch}, x-axis represents the offloading parameters,
-while y-axis respresents the average percent CPU utilization for TCP and UDP
+while y-axis represents the average percent CPU utilization for TCP and UDP
 flows for a client when flows directly traverse from client to server.
 Irrespective of offloading settings, 100\% CPU utilization is observed
 for UDP flows. This makes sense, since no offloading should occur for
@@ -287,7 +292,7 @@ sure how this makes sense.
 
 \section{Limitations and Future Work} 
 
-\emph{Remore Direct Memory Access (RDMA)} NICs would be interesting to study
+\emph{Remore Direct Memory Access (RDMA)} would be interesting to study
 since it simplifies many problems observed with generic TCP offloading. It would
 be especially interesting and important to relate latency observed from
 utilizing RDMA and CPU utilization on non-RDMA based NICs. Since RDMAs enable
@@ -296,9 +301,19 @@ work is required from CPUs, caches or context switches.
 
 \emph{Maximum Transmission Unit (MTU)} is the greatest amount of data that can
 be transferred in one physical frame over the network. Thus, increasing MTU, may
-decrease latency. The standard MTU for etnernet is 1500 bytes. We would have
-like to increase that upto 9000 units, but were unable to perform experiments
+decrease latency. The standard MTU for ethernet is 1500 bytes. We would have
+like to increase that up to 9000 units, but were unable to perform experiments
 due to hardware limitations.  
+
+Although we study latency with the primary target being data centers, our work
+is conducted on two multi-core machines. Multiple hops taken by a packet while
+traversing from client to server would influence latency, and we are unable to
+study this variable with our experimental setup. 
+\emph{Source files}:
+\begin {enumerate}
+\item Report:"root@wings-openflow-1:~/users/zainab/838-project/report.tar.gz"
+\item Scripts:"root@wings-openflow-1:~/users/zainab/838-project/report.tar.gz"
+\end{enumerate}
 
 \section{Conclusion}
 In this paper we study types of flows, influence of switches and varying
@@ -310,7 +325,7 @@ Throughput dropped when TSO/GSO is disabled. This is likely due to 100% CPU
 utilization, but it's unclear in what's different between the switch/no switch
 case. SFQ provides lower average latency, but higher variation. 15ms stdev when all
 settings are enabled. Increases in CPU utilization seem minimal/non existent.
-These 
+
 \section{Acknowledgments}
 
 We would like to thank Aaron Gember without whose help, running experiments on
