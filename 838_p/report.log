@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 20:39
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -474,12 +474,12 @@ File: img/latencySFQUdp.ps Graphic file (type eps)
 File: img/bandwidthClientNoSwitch.ps Graphic file (type eps)
 
 <img/bandwidthClientNoSwitch.ps> [4]
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 []\OT1/ptm/m/n/10 Report:"root@wings-openflow-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 []\OT1/ptm/m/n/10 Scripts:"root@wings-openflow-
  []
 
@@ -489,14 +489,14 @@ Underfull \hbox (badness 5756) in paragraph at lines 49--53
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
  [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 344.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A04B4E1727C5483B8C2CEAA88729CD36;532.
 
@@ -511,6 +511,6 @@ Here is how much of TeX's memory you used:
  8509 multiletter control sequences out of 15000+200000
  23641 words of font info for 57 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 30i,8n,31p,260b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,8n,31p,260b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.dvi (6 pages, 39344 bytes).
+Output written on report.dvi (6 pages, 39332 bytes).
