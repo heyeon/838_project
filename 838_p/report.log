@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 18:53
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -37,10 +37,46 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/geometry/geom
+etry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/graphics/keyv
+al.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/generic/oberdiek/if
+pdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
+)
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/generic/oberdiek/if
+vtex.sty
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/generic/ifxetex/ifx
+etex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/endnotes/endn
 otes.sty
-\c@endnote=\count87
-\endnotesep=\dimen103
+\c@endnote=\count90
+\endnotesep=\dimen111
 \@enotes=\write3
 )
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/hype
@@ -59,11 +95,9 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
-Package ifvtex Info: VTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -90,28 +124,19 @@ Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
 Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
 )
-(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/graphics/keyv
-al.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
-)
-(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/generic/ifxetex/ifx
-etex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/oberdiek/kvop
 tions.sty
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
-\@linkdim=\dimen104
-\Hy@linkcounter=\count88
-\Hy@pagecounter=\count89
+\@linkdim=\dimen112
+\Hy@linkcounter=\count91
+\Hy@pagecounter=\count92
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/pd1e
 nc.def
 File: pd1enc.def 2011/08/19 v6.82h Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count90
+\Hy@SavedSpaceFactor=\count93
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/latexconfig/h
 yperref.cfg
@@ -124,16 +149,16 @@ Package hyperref Info: Plain pages OFF on input line 4068.
 Package hyperref Info: Backreferencing OFF on input line 4073.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4291.
-\c@Hy@tempcnt=\count91
+\c@Hy@tempcnt=\count94
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf/tex/latex/html/url.sty
 Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
  names
 )
 LaTeX Info: Redefining \url on input line 4644.
-\Fld@menulength=\count92
-\Field@Width=\dimen105
-\Fld@charsize=\dimen106
+\Fld@menulength=\count95
+\Field@Width=\dimen113
+\Fld@charsize=\dimen114
 Package hyperref Info: Hyper figures OFF on input line 5730.
 Package hyperref Info: Link nesting OFF on input line 5735.
 Package hyperref Info: Hyper index ON on input line 5738.
@@ -143,9 +168,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 5755.
 Package hyperref Info: PDF/A mode OFF on input line 5760.
 LaTeX Info: Redefining \ref on input line 5800.
 LaTeX Info: Redefining \pageref on input line 5804.
-\Hy@abspage=\count93
-\c@Item=\count94
-\c@Hfootnote=\count95
+\Hy@abspage=\count96
+\c@Item=\count97
+\c@Hfootnote=\count98
 )
 
 Package hyperref Message: Driver (default): hdvips.
@@ -158,12 +183,12 @@ File: hdvips.def 2011/08/19 v6.82h Hyperref driver for dvips
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/pdfm
 ark.def
 File: pdfmark.def 2011/08/19 v6.82h Hyperref definitions for pdfmark specials
-\pdf@docset=\toks15
+\pdf@docset=\toks16
 \pdf@box=\box26
-\pdf@toks=\toks16
-\pdf@defaulttoks=\toks17
-\Fld@listcount=\count96
-\c@bookmark@seq@number=\count97
+\pdf@toks=\toks17
+\pdf@defaulttoks=\toks18
+\Fld@listcount=\count99
+\c@bookmark@seq@number=\count100
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/oberdiek/reru
 nfilecheck.sty
@@ -173,22 +198,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 ))
-(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/geometry/geom
-etry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count98
-\Gm@cntv=\count99
-\c@Gm@tempcnt=\count100
-\Gm@bindingoffset=\dimen107
-\Gm@wd@mp=\dimen108
-\Gm@odd@mp=\dimen109
-\Gm@even@mp=\dimen110
-\Gm@layoutwidth=\dimen111
-\Gm@layoutheight=\dimen112
-\Gm@layouthoffset=\dimen113
-\Gm@layoutvoffset=\dimen114
-\Gm@dimlist=\toks18
-)
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/tools/calc.st
 y
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
@@ -292,47 +301,26 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/psnfss/ot1ptm
 .fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 18.
-
-(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/name
-ref.sty
-Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
-
-(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/generic/oberdiek/ge
-ttitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count105
-)
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
- (./report.out) (./report.out)
-\@outlinefile=\write4
-\openout4 = `report.out'.
-
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -341,14 +329,14 @@ LaTeX Info: Redefining \nameref on input line 18.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* h-part:(L,W,R)=(71.13188pt, 451.01793pt, 92.14519pt)
 * v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=469.75499pt
 * \textheight=650.43pt
-* \oddsidemargin=19.8752pt
-* \evensidemargin=19.8752pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
 * \topmargin=0.0pt
 * \headheight=0.0pt
 * \headsep=0.0pt
@@ -367,31 +355,51 @@ LaTeX Info: Redefining \nameref on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+\AtBeginShipoutBox=\box29
+Package hyperref Info: Link coloring OFF on input line 19.
+
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/hyperref/name
+ref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/generic/oberdiek/ge
+ttitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count105
+)
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
+ (./report.out) (./report.out)
+\@outlinefile=\write4
+\openout4 = `report.out'.
+
 \big@size=\dimen119
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 19
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 20
 .
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/psnfss/ot1ztm
 cm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 19
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 20
 .
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/psnfss/omlztm
 cm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 19
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 20
 .
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/psnfss/omsztm
 cm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 19
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 20
 .
 
 (/afs/cs.wisc.edu/s/texlive-2011/amd64_rhel5/texmf-dist/tex/latex/psnfss/omxztm
@@ -399,32 +407,32 @@ cm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
  [1
 
 
 ]
 
 LaTeX Warning: Reference `avgBandwidthClientNoswitch' on page 2 undefined on in
-put line 119.
+put line 120.
 
 
 LaTeX Warning: Reference `fig:avgcpuclientnoswitch' on page 2 undefined on inpu
-t line 130.
+t line 131.
 
 
 LaTeX Warning: Reference `fig:avgcpuservernoswitch' on page 2 undefined on inpu
-t line 149.
+t line 150.
 
 File: img/cpuTcp.ps Graphic file (type eps)
 <img/cpuTcp.ps>
@@ -468,12 +476,12 @@ Underfull \hbox (badness 5756) in paragraph at lines 49--53
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 331.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 332.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A04B4E1727C5483B8C2CEAA88729CD36;532.
 
@@ -482,9 +490,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5256 strings out of 493630
- 80430 string characters out of 3134987
- 175590 words of memory out of 3000000
+ 5262 strings out of 493630
+ 80783 string characters out of 3134987
+ 175195 words of memory out of 3000000
  8509 multiletter control sequences out of 15000+200000
  23641 words of font info for 57 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191

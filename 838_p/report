@@ -1,4 +1,5 @@
 \documentclass[letterpaper,twocolumn,10pt]{article}
+\usepackage[left=2.5cm]{geometry}
 \usepackage{endnotes, hyperref, geometry,calc,epstopdf,usenix, graphicx, float}
 \date{} 
 \title{
