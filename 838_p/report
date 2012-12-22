@@ -38,7 +38,7 @@ focus on circuit switching moved to packet switching due to bandwidth and
 hardware inefficiencies in working with network resources for bursty
 communication traffic. The Transmission Control Protocol(TCP) was invented to
 address the issue of bandwidth/congestion collapse in the network and ensure
-bandwidth fairness.~\cite{dctcp,queueing,tcpPacing} \\However network latency has
+bandwidth fairness.~\cite{dctcp,queueing,tcpPacing} However network latency has
 been given less importance. The last 30 decades have brought a meager 30x
 reduction in latency, versus the 3000x times improvement in bandwidth. Several
 studies have been conducted in the 90s to tackle the latency issue, but they
@@ -87,15 +87,22 @@ study the influence of offloading on latency. TCP segmentation offload (TSO)/
 Generic segmentation offload (GSO) are considered useful in increase outbound
 throughput of high-bandwidth network connections since it reduces host CPU
 cycles for protocol header processing and checksumming.Generic receiving offload
-(GRO) attempts to replicate the TSO modus operandi on the receiver-side. We conduct 
-our experiments with the following offloading configurations at end-hosts:
+(GRO) attempts to replicate the TSO modus operandi on the receiver-side. Table~\ref{table:offloading}
+shows the configurations used at both end-hosts for each experiment.
 
-\begin{enumerate} 
-\item TSO/GSO and GRO : On 
-\item TSO/GSO and GRO : Off 
-\item TSO/GSO : On and GRO : Off 
-\item TSO/GSO : Off and GRO : On 
-\end{enumerate} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+  \hline
+  & TSO/GSO & GRO \\ \hline
+  Experiment 1 & On & On \\ \hline
+  Experiment 2 & Off & Off \\ \hline
+  Experiment 3 & On & Off \\ \hline
+  Experiment 4 & Off & On \\ \hline
+\end{tabular}
+\caption{Possible parameters for offloading.}
+\label{table:offloading}
+\end{table}
 
 \subsection{Experimental Setup} Two commodity computers connected via an
 OpenFlow switch ~\cite{openflow}. One of the computers served as a client (sender of traffic) and
@@ -110,21 +117,38 @@ terms of min, max, stdev and average latency, average throughput in terms of
 Mbits/sec and average percent CPU utilization. These experiments were run on
 multi-core machines at coarse timescales (1 second for CPU measurements) and it
 is our belief that our instrumentation adds little overhead.\section{Evaluation}
-\subsection{Bandwidth} 
+\section{Evaluation}
+In our evaluation, we look at the following metrics: CPU utilization, delay of the latency sensitive flow, and throughput with varying offloading parameters and with/without a switch.
+\subsection{TCP} 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/bandwidthClientNoSwitch.ps}
+\caption{TCP Throughput with various offloading combinations without the presence of a switch at the client (sender).} 
+\label{fig:bandwidthClientNoSwitch}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/cpuClientTcpUdpNoSwitch.ps}
+\caption{In all cases, UDP throughput utilizes 100\% of one CPU core. This may be due to polling, as the flow is not fully utilizing the link. This not the case for TCP, as the increase in CPU utilization results in a decrease in throughput.}
+\label{fig:cpuClientTcpUdpNoSwitch}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{img/latencyTCP.ps}
+\caption{TCP latency with and without a switch. In the presence of a switch, latency predictably increases when offloading is disabled. More puzzling however, is that without a switch, latency {\it decreases}. It's unclear how dedicated hardware for segmenting does not provide lower latency than a CPU.}
+\label{fig:latencyTcp}
+\end{figure}
 
 TSO works by moving the work of breaking down large chunks of data into MTU-sized packets over to the NIC.
-In Figure ~\ref{avgBandwidthClientNoswitch}, the x-axis represents offloading settings
-while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
-switched off. This suggests that throughput may be increased by
-switching off offloading. Keeping GRO on in the absence of TSO/GSO did
-not show an appreciable change, thus suggested that GRO plays a little
-to no role in increasing bandwidth. Interestingly, the bandwidth
-remained fairly constant for switch as well as client despite varying
-offloading parameters when flows traversed through an OpenFlow switch. 
+Figure~\ref{fig:bandwidthClientNoSwitch}, illustrates the benefit of this. Bandwidth is almost halved when TSO/GSO if disabled. If we look at 
+Figure~\ref{fig:cpuClientTcpUdpNoSwitch}, we see that CPU utilization increases to 100\% when offloading is disabled. This likely contributes to the 
+drop in throughput seen in Figure~\ref{fig:bandwidthClientNoSwitch}. GRO seems to have no impact on throughput as the flow is asymmetric and is only receiving ACKs. Interestingly, average latency is lower when offloading is disabled (Figure ~\ref{fig:latencyTCP}) when not switch is present.
 
 
-In Figure ~\ref{fig:avgcpuclientnoswitch}, x-axis represents the offloading parameters,
+In Figure ~\ref{fig:cpuClientTcpUdpNoSwitch}, x-axis represents the offloading parameters,
 while y-axis respresents the average percent CPU utilization for TCP and UDP
 flows for a client when flows directly traverse from client to server.
 Irrespective of offloading settings, 100\% CPU utilization is observed
@@ -155,6 +179,7 @@ that packet segmentation does not occur at the server end.
 average percent CPU utilization}
 \label{fig:cpuTcp}
 \end{figure}
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{img/latencyTCP.ps}
