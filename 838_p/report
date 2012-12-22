@@ -55,16 +55,18 @@ centers and examining ways of reducing latency in data centers is interesting
 as the data center operator has control of all aspects of the network. However, 
 it is still important to investigate end-host solutions for cases where a tenant 
 is co-locating servers in a data center and does not control the network topology 
-or switches. Reducing latency is especially important in applications such as High Frequency Trading, HPC and
-Google Instant Search service could especially benefit from this.  Several
+or switches. Reducing latency is especially important in applications such as
+High Frequency Trading, HPC and Google Instant Search service could especially
+benefit from this.  Several
 high-frequency traders implement trading applications with a goal to reach a
 trade decision in under 100 microseconds. NIC, end-host stacks and switches are
 all points where a packet may experience latency while traversing from client to
 server.  In order to address delays arising from queueing delay at switches,
 DCTCP ~\cite{dctcp} uses ECN marking to slow down flows before the queue is
 saturated. HULL ~\cite{hull} further suggests trading off a little bandwidth to
-provide smaller amount of latency by never allowing queues to build up at the switch.
-In this paper, we aim to understand how offloading, switches, NICs, and queues affect latency, and what are the potential trade-offs.
+provide smaller amount of latency by never allowing queues to build up at the
+switch.  In this paper, we aim to understand how offloading, switches, NICs, and
+queues affect latency, and what are the potential trade-offs.
 
 OUR OBSERVATION IS THAT
 
@@ -111,14 +113,8 @@ is our belief that our instrumentation adds little overhead.\section{Evaluation}
 \subsection{Bandwidth} 
 
 
-<<<<<<< HEAD
-TSO works by moving the work of breaking down large chunks of data into
-MTU-sized packets over to the NIC.
-In figavgBandwidthClientNoswitch, the x-axis represents offloading settings
-=======
 TSO works by moving the work of breaking down large chunks of data into MTU-sized packets over to the NIC.
 In Figure ~\ref{avgBandwidthClientNoswitch}, the x-axis represents offloading settings
->>>>>>> 62ec38b3caccffb281b3b651a600ec6d9adf3128
 while y-axis represents bandwidth. Bandwidth is almost halved when TSO/GSO if
 switched off. This suggests that throughput may be increased by
 switching off offloading. Keeping GRO on in the absence of TSO/GSO did

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 19:14
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.9.8)  21 DEC 2012 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -424,15 +424,15 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 ]
 
 LaTeX Warning: Reference `avgBandwidthClientNoswitch' on page 2 undefined on in
-put line 120.
+put line 117.
 
 
 LaTeX Warning: Reference `fig:avgcpuclientnoswitch' on page 2 undefined on inpu
-t line 131.
+t line 127.
 
 
 LaTeX Warning: Reference `fig:avgcpuservernoswitch' on page 2 undefined on inpu
-t line 150.
+t line 146.
 
 File: img/cpuTcp.ps Graphic file (type eps)
 <img/cpuTcp.ps>
@@ -476,12 +476,12 @@ Underfull \hbox (badness 5756) in paragraph at lines 49--53
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 328.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 328.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A04B4E1727C5483B8C2CEAA88729CD36;532.
 
@@ -498,4 +498,4 @@ Here is how much of TeX's memory you used:
  831 hyphenation exceptions out of 8191
  30i,8n,31p,281b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on report.dvi (5 pages, 38008 bytes).
+Output written on report.dvi (5 pages, 37672 bytes).
